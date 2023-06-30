@@ -1,0 +1,194 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: Billing from {from_date} to {to_date} -{#####}",
+ "creation": "2023-06-20 10:13:23.955496",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "season",
+  "section_break_pjm6g",
+  "from_date",
+  "column_break_mm46x",
+  "to_date",
+  "section_break_tke7g",
+  "includes_sales_invoice_deduction",
+  "column_break_tffxz",
+  "includes_loan_installment",
+  "column_break_i0nvd",
+  "includes_loan_interest",
+  "section_break_c4s6q",
+  "show_list",
+  "column_break_qt8b3",
+  "select_all",
+  "section_break_qw2wm",
+  "farmer_table",
+  "section_break_63tbl",
+  "do_billing",
+  "calculation_table",
+  "amended_from",
+  "on_submit_event_call",
+  "today"
+ ],
+ "fields": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "column_break_mm46x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "section_break_tke7g",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "show_list",
+   "fieldtype": "Button",
+   "label": "Show List"
+  },
+  {
+   "fieldname": "column_break_qt8b3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "select_all",
+   "fieldtype": "Button",
+   "label": "Select All"
+  },
+  {
+   "fieldname": "section_break_qw2wm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "farmer_table",
+   "fieldtype": "Table",
+   "label": "Farmer Table",
+   "options": "Child Farmer Cane Bill"
+  },
+  {
+   "fieldname": "section_break_63tbl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "do_billing",
+   "fieldtype": "Button",
+   "label": "Do Billing"
+  },
+  {
+   "fieldname": "calculation_table",
+   "fieldtype": "Table",
+   "label": "Calculation Table",
+   "options": "Child Calculation Cane Bill"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Cane Billing",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Cane Billing",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "season",
+   "fieldtype": "Link",
+   "label": "Season",
+   "options": "Season"
+  },
+  {
+   "fieldname": "section_break_pjm6g",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "includes_sales_invoice_deduction",
+   "fieldtype": "Check",
+   "label": "Includes Sales Invoice Deduction"
+  },
+  {
+   "fieldname": "column_break_tffxz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "includes_loan_installment",
+   "fieldtype": "Check",
+   "label": "Includes Loan Installment"
+  },
+  {
+   "fieldname": "column_break_i0nvd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "includes_loan_interest",
+   "fieldtype": "Check",
+   "label": "Includes Loan Interest"
+  },
+  {
+   "fieldname": "section_break_c4s6q",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "on_submit_event_call",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "ON SUBMIT EVENT CALL"
+  },
+  {
+   "default": "Today",
+   "fieldname": "today",
+   "fieldtype": "Date",
+   "hidden": 1,
+   "label": "Today"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-23 10:27:08.402472",
+ "modified_by": "Administrator",
+ "module": "cane_bill",
+ "name": "Cane Billing",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

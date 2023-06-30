@@ -1,0 +1,243 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "VPPL-LOAP-.YYYY.-.#####",
+ "creation": "2023-06-20 10:57:48.420025",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "applicant",
+  "applicant_name",
+  "branch",
+  "address",
+  "column_break_1ddzr",
+  "posting_date",
+  "status",
+  "season",
+  "section_break_gau3t",
+  "loan_type",
+  "loan_amount",
+  "column_break_8xm3o",
+  "rate_of_interest",
+  "repayment_period_in_years",
+  "maximum_amount",
+  "repayment_method",
+  "column_break_tk1ek",
+  "description",
+  "section_break_xjjav",
+  "account_paid_from",
+  "column_break_eaaxs",
+  "account_paid_to",
+  "account_interest_paid_to",
+  "section_break_nq6ai",
+  "installments_table",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "applicant",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Applicant",
+   "options": "Farmer List",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "applicant.supplier_name",
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "Applicant Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "applicant.branch",
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fetch_from": "applicant.village",
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "column_break_1ddzr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "no_copy": 1,
+   "options": "Open\nApproved\nRejected",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "season",
+   "fieldtype": "Link",
+   "label": "Posting Season",
+   "options": "Season"
+  },
+  {
+   "fieldname": "section_break_gau3t",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "loan_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Loan Type",
+   "options": "Farmer Loan Type",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "loan_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Loan Amount",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "column_break_8xm3o",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rate_of_interest",
+   "fieldtype": "Percent",
+   "label": "Rate of Interest"
+  },
+  {
+   "fieldname": "repayment_period_in_years",
+   "fieldtype": "Data",
+   "label": "Repayment Period in Years"
+  },
+  {
+   "fetch_from": "loan_type.maximum_loan_amount",
+   "fieldname": "maximum_amount",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Maximum Amount"
+  },
+  {
+   "fieldname": "repayment_method",
+   "fieldtype": "Select",
+   "label": "Repayment Method",
+   "options": "Deduction From Cane Bill"
+  },
+  {
+   "fieldname": "column_break_tk1ek",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "section_break_xjjav",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "loan_type.account_paid_from",
+   "fieldname": "account_paid_from",
+   "fieldtype": "Link",
+   "label": "Account Paid From",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_eaaxs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "loan_type.account_paid_to",
+   "fieldname": "account_paid_to",
+   "fieldtype": "Link",
+   "label": "Account Paid To",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "loan_type.account_interest_paid_to",
+   "fieldname": "account_interest_paid_to",
+   "fieldtype": "Link",
+   "label": "Account interest Paid To",
+   "options": "Account"
+  },
+  {
+   "fieldname": "section_break_nq6ai",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "installments_table",
+   "fieldtype": "Table",
+   "label": "Installments Table",
+   "options": "Child Farmer Loan Application"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Farmer Loan Application",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-06-20 15:18:09.400476",
+ "modified_by": "Administrator",
+ "module": "cane_bill",
+ "name": "Farmer Loan Application",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

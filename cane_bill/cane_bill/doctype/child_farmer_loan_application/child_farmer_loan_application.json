@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-20 10:45:38.915924",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "season",
+  "installment",
+  "rate_of_interest",
+  "interest"
+ ],
+ "fields": [
+  {
+   "fieldname": "season",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Season"
+  },
+  {
+   "fieldname": "installment",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Installment"
+  },
+  {
+   "fieldname": "rate_of_interest",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Rate of Interest"
+  },
+  {
+   "fieldname": "interest",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Interest"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-20 10:46:44.920245",
+ "modified_by": "Administrator",
+ "module": "cane_bill",
+ "name": "Child Farmer Loan Application",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
